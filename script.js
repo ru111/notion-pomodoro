@@ -1,9 +1,9 @@
 var startSeconds,
     sessionCount = 0,
     counter,
-    defaultTaskTime = 45,
     clicks = 0,
-    defaultBreakTime = 1;
+    defaultTaskTime = 45,
+    defaultBreakTime = 15;
 
 $(document).ready(function () {
   $('#taskTime').html(defaultTaskTime);
