@@ -1,8 +1,8 @@
 var startSeconds,
     sessionCount = 0,
     counter,
-    clicks = 0,
     defaultTaskTime = 45,
+    clicks = 0,
     defaultBreakTime = 15;
 
 $(document).ready(function () {
