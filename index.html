@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+  <meta charset="UTF-8">
+  <title>CodePen - Simple pomodoro timer for Notion</title>
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+<meta property="og:locale" content="en_US">
+<meta property="og:type" content="website">
+<link rel="stylesheet prefetch" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+<link rel="stylesheet prefetch" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Varela+Round">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Nova+Square"><link rel="stylesheet" href="./style.css">
+
+</head>
+<body>
+<!-- partial:index.partial.html -->
+<div class="container text-center timer">
+
+  <div class="row" style="height: 1em;">
+
+  </div>
+  <div class="row">
+    <h3 class="title">
+      <span id="sessionCount" style="color:#BD050B"> &#x1f345;0</span>
+      </h3>
+  </div>
+
+  <div class="row">
+     <div id="clockTime" class="column col-md-6 clock-time"></div>
+     <div class="column col-md-6 play-reset-row">
+    <span class="fa-stack fa-md icon">
+      <i class="fa fa-circle fa-stack-2x fa-inverse"></i>
+      <i id="playPauseButton" class="fa fa-play fa-stack-1x"></i>
+    </span>
+    <span class="fa-stack fa-md icon">
+      <i class="fa fa-circle fa-stack-2x fa-inverse"></i>
+      <i id="resetClockButton" class="fa fa-refresh fa-stack-1x"></i>
+    </span>
+  </div>
+
+<div class="collapse" id="collapseTime">
+  <div class="card card-body">
+   <div class="row time-adjustment-row">
+    <div class="col-xs-4 col-xs-offset-2 task-time-col" style="min-width: 100px">
+      <p id="taskTime" class="task-time-display"></p>
+      <div class="row">
+        <p class="task-time-text">Task Time</p>
+        <div class="row">
+          <span class="fa-stack fa-md icon">
+            <i class="fa fa-circle fa-stack-2x fa-inverse"></i>
+            <i id="taskTimeUpButton" class="fa fa-plus fa-stack-1x"></i>
+          </span>
+          <span class="fa-stack fa-md icon">
+            <i class="fa fa-circle fa-stack-2x fa-inverse"></i>
+            <i id="taskTimeResetButton" class="fa fa-refresh fa-stack-1x"></i>
+           </span>
+          <span class="fa-stack fa-md icon">
+            <i class="fa fa-circle fa-stack-2x fa-inverse"></i>
+            <i id="taskTimeDownButton" class="fa fa-minus fa-stack-1x"></i>
+          </span>
+        </div>
+      </div>
+    </div>
+    <div class="col-xs-4 break-time-col" style="min-width: 100px">
+      <p id="breakTime" class="break-time-display"></p>
+      <div class="row">
+        <p class="break-time-text">Break Time</p>
+      </div>
+      <div class="row">
+        <span class="fa-stack fa-md icon">
+          <i class="fa fa-circle fa-stack-2x fa-inverse"></i>
+          <i id="breakTimeUpButton" class="fa fa-plus fa-stack-1x"></i>
+        </span>
+        <span class="fa-stack fa-md icon">
+          <i class="fa fa-circle fa-stack-2x fa-inverse"></i>
+          <i id="breakTimeResetButton" class="fa fa-refresh fa-stack-1x"></i>
+        </span>
+        <span class="fa-stack fa-md icon">
+          <i class="fa fa-circle fa-stack-2x fa-inverse"></i>
+          <i id="breakTimeDownButton" class="fa fa-minus fa-stack-1x"></i>
+        </span>
+      </div>
+    </div>
+  </div>
+  </div>
+</div>
+
+<div class="collapse" id="collapseSettings">
+  <div class="card card-body">
+  <div class="switch checkbox row">
+    <div class="col-xs-9 col-xs-offset-2">
+      <p>
+        <label id="continuousModeLabel"
+               class="continuous-mode-label"
+               title="Don't stop the timer when it reaches 0. Proceed to the next timer."
+               data-toggle="tooltip"
+               data-placement="auto left"
+               data-trigger="hover">
+          <input id="perpetual" type="checkbox">Perpetual Pomodoro</label>
+      </p>
+      <p>
+        <label id="notificationsLabel"
+               class="notifications-label"
+               title="Not supported in Internet Explorer, Edge, or Mobile browsers yet."
+               data-toggle="tooltip"
+               data-placement="auto left"
+               data-trigger="hover">
+         <input id="notify" type="checkbox">Desktop Notifications</label>
+      </p>
+    </div>
+    </div>
+  </div>
+  </div>
+
+<button type="button" onClick="countDistracted()" style="height:60px;width:60px;color:white;background-color:#303437;border-radius:100%;font-size:20px;"> <a id="clicks" style="color:white;text-decoration:none">0</a></button>
+
+</div>
+
+<script src="https://code.jquery.com/jquery-2.2.1.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+<!-- partial -->
+  <script  src="./script.js"></script>
+
+</body>
+</html>
